@@ -1,7 +1,11 @@
 body {
   background-color: #f10c0c;
 }
-
+.div{
+  background-color: #f10c0c;
+  width: 100%;
+  height: 100%;
+}
 .grid {
   
   display: -ms-grid;
