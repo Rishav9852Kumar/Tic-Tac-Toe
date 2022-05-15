@@ -9,18 +9,18 @@ body {
   -ms-grid-columns: 1fr 1fr 1fr; 
   grid-template-columns: 1fr 1fr 1fr;
 
-  grid-gap: 15px;
+  grid-gap: 10px;
 } 
  
 
 .box {
   width: auto;
-  height: 100px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .icon {
-  font-size: 35px;
+  font-size: 15px;
   color: #d5ddce;
 }

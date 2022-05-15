@@ -2,17 +2,17 @@ import React, {useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Icon from"./Components/icons";
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {Card,CardBody,Container,Button,Col,Row} from 'reactstrap';
-
-
+import ThemeContext from './Context/ThemeContext';
+import Header from "./Components/Header";
+import Hero from "./Components/Hero";
 
 const itemArray= new Array(9).fill("empty");
 
 const App=()=> {
-
+  const themeHook =useState("light");
   const [isCross,setIsCross]=useState(false);
   const [winMessage,setWinMessage]=useState("");
 
@@ -97,7 +97,14 @@ const App=()=> {
   checkIsWinner();
 };
   return (
-    <Container className="p-5">
+    <div 
+    style={{
+      backgroundColor:`${themeHook[0]==="light"?"#bec4c4":"black"}`  //  this is that changes the background color //
+    }}>
+     <ThemeContext.Provider value={themeHook}>
+     <Hero/>
+   </ThemeContext.Provider>
+      <Container className="p-4">
       <ToastContainer position="bottom-center" />
       <Row className="row">
         <Col md={6} className="offset-md-3">
@@ -105,17 +112,19 @@ const App=()=> {
             <div className="mb-2 mt-2">
               <h1 className="text-uppercase text-center text-success">
                 {winMessage}
-              </h1>   
+              </h1>
             <Button color ="success" block onClick={reloadGame}>Reload the game </Button>
              </div>
           ):(
-            <h1 className="text-center text-warning">
+            <h2 className="text-center text-warning">
               {isCross ? "Cross":"Circle"} turns
-            </h1>
+            </h2>
           )}
           <div className="grid">
             {itemArray.map((item,index)=>(
-              <Card color="warning" onClick={()=>changeItem(index)}>
+              <Card style={{
+                backgroundColor:`${themeHook[0]==="light"?"#DB0B5F":"#ffc107"}`
+              }} onClick={()=>changeItem(index)}>
               <CardBody className="box">
               <Icon name={item}/>
               </CardBody>
@@ -125,6 +134,8 @@ const App=()=> {
         </Col>
       </Row>
     </Container>
+    </div>
+    
   );
   
 
