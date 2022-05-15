@@ -45,7 +45,7 @@ const App=()=> {
     itemArray[1]=== itemArray[4] &&
     itemArray[1] !=="empty"
      ) {
-     setWinMessage(`${itemArray[0]} won`);
+     setWinMessage(`${itemArray[1]} won`);
    }else if(
     itemArray[4]===itemArray[7] &&
     itemArray[1]=== itemArray[4] &&
@@ -105,8 +105,8 @@ const App=()=> {
             <div className="mb-2 mt-2">
               <h1 className="text-uppercase text-center text-success">
                 {winMessage}
-              </h1>
-            <Button collor ="success" block onClick={reloadGame}>Reload the game </Button>
+              </h1>   
+            <Button color ="success" block onClick={reloadGame}>Reload the game </Button>
              </div>
           ):(
             <h1 className="text-center text-warning">
