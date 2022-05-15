@@ -106,7 +106,7 @@ const App=()=> {
               <h1 className="text-uppercase text-center text-success">
                 {winMessage}
               </h1>
-            <Button collor ="success" block onClick={reloadGame}>Reload the game </Button>
+            <Button color ="success" block onClick={reloadGame}>Reload the game </Button>
              </div>
           ):(
             <h1 className="text-center text-warning">
