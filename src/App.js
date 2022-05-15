@@ -104,7 +104,7 @@ const App=()=> {
      <ThemeContext.Provider value={themeHook}>
      <Hero/>
    </ThemeContext.Provider>
-      <Container className="p-4">
+      <Container className="p-5">
       <ToastContainer position="bottom-center" />
       <Row className="row">
         <Col md={6} className="offset-md-3">
