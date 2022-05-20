@@ -5,3 +5,4 @@
 
 Use this `(CI='' npm run build)`
 
+yes

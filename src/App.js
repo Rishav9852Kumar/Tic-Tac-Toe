@@ -81,7 +81,7 @@ const App=()=> {
       itemArray[7]!=="empty"&&
       itemArray[8]!=="empty"
    ){
-    setWinMessage(`Draw`);
+    setWinMessage(`we have a Draw`);
    }
   };
   const changeItem =itemNumber=>{

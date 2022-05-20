@@ -5,7 +5,7 @@ import ThemeToggler from "./Themetoggler";
 const Header = () => {
     return (
         <header>
-            <h1>theme toggeler</h1>
+            <h1>Theme toggeler</h1>
             <ThemeToggler />
         </header>
     );
